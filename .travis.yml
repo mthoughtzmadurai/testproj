@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+ - "node"
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key:
+    secure: "$SECRETACCESSKEY"
+  region: "ap-south-1"  
+  app: "My First Elastic Beanstalk Application"
+  env: "Default-Environment"
+  bucket_name: "elasticbeanstalk-ap-south-1-573034299960"
+  on:
+branch: master
