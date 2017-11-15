@@ -290,22 +290,6 @@ app.use(function(req, res) {
   });
 //}
 
-// production error handler
-// no stacktraces leaked to user
-// app.use(function(err, req, res, next) {
-//   res.status(err.status || 500);
-//   res.render('error', {
-//     message: err.message,
-//     error: {}
-//   });
-//   next();
-// });
-
-// app.route('/')
-//     .get(function(req, res) {
-//       res.render(__dirname+'/app/index.html');
-//     });
-// module.exports = app;
 
 var server = http.createServer(app);
 var io = require('socket.io')(server);
@@ -320,33 +304,7 @@ io.listen(server).on('connection', function (socket) {
         // console.log(data);
         socket.broadcast.emit('testemit', "asdasd");
 
-    // });
-
-
-    // socket.on('goalactionadded', function (data) {
-    //     // console.log(data);
-    //     socket.broadcast.emit('goalactionadded', data);
-
-    // });
-
-
-    // socket.on('journalcommentadded', function (data) {
-    //     // console.log(data);
-    //     socket.broadcast.emit('journalcommentadded', data);
-
-    // });
-
-    // socket.on('goalcommentadded', function (data) {
-    //     // console.log(data);
-    //     socket.broadcast.emit('journalcommentadded', data);
-
-    // });
-
-    // socket.on('checkinadded', function (data) {
-
-    //     socket.broadcast.emit('checkinadded', data);
-
-    // });
+   
 
 });
 server.listen(80);
