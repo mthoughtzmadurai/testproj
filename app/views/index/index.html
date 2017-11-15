@@ -1,0 +1,107 @@
+ <div class="login-box">
+ <!-- START ACCORDION & CAROUSEL-->
+      <h2 class="page-header" style="text-align: center;font-weight:bold;">Confirmo</h2>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-solid">
+            
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+               
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <div class="login-box" ng-controller="IndexCtrl">
+                        <!-- /.login-logo -->
+                        <div class="login-box-body">
+                            <p class="login-box-msg">Sign in to start your session</p>
+                        <div class="callout callout-danger error_msg" style="display: none">
+                                        <p id="error"></p>
+                                    </div>
+                            <div class="form-group has-feedback">
+                                <input type="text" id="username" ng-model="user.username" class="form-control" placeholder="Username">
+                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="password" id="password" ng-model="user.password" class="form-control" placeholder="Password">
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-8">
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-xs-4">
+                                <button type="submit" ng-click="loginPressed()" ng-enter="loginPressed()" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            
+                <ol class="carousel-indicators customcontrol">
+                  <li data-target="#carousel-example-generic" ng-click="clearForm()" data-slide-to="1" class="">Create an Account</li>
+                </ol>
+
+                        </div>
+                        <!-- /.login-box-body -->
+                        </div>
+                        <!-- /.login-box -->
+                  </div>
+                  <div class="item">
+                      <div class="login-box" ng-controller="IndexCtrl">
+                        <!-- /.login-logo -->
+                        <div class="login-box-body">
+                            <p class="login-box-msg">Create an Account</p>
+                        <div class="callout callout-danger regerror_msg" style="display: none">
+                                        <p id="regerror"></p>
+                                    </div>
+                            <div class="form-group has-feedback">
+                                <input type="text" id="name" ng-model="reguser.name" class="form-control" placeholder="Name">
+                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="text" id="email" ng-model="reguser.email" class="form-control" placeholder="Email">
+                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="text" id="regusername" ng-model="reguser.username" class="form-control" placeholder="Username">
+                                <span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="password" id="regpassword" ng-model="reguser.password" class="form-control" placeholder="Password">
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <input type="password" id="confpass" class="form-control" placeholder="Confirm Password">
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-8">
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-xs-4">
+                                <button type="submit" ng-click="createPressed()" ng-enter="createPressed()" class="btn btn-primary btn-block btn-flat">Create</button>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+
+                <ol class="carousel-indicators customcontrol">
+                  <li data-target="#carousel-example-generic" ng-click="clearForm()" data-slide-to="0">Signin</li>
+                </ol>
+                        </div>
+                        <!-- /.login-box-body -->
+                        </div>
+                        <!-- /.login-box -->
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+
+      </div>
+      <!-- /.row -->
+ </div>
