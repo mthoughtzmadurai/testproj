@@ -311,7 +311,7 @@ var server = http.createServer(app);
 var io = require('socket.io')(server);
 io.listen(server).on('connection', function (socket) {
   socketused = socket;
-    console.log(socket.id);
+    // console.log(socket.id);
     // sokcet.on("getid",function(data){
     //     data.id = "test";
     // });
@@ -349,5 +349,6 @@ io.listen(server).on('connection', function (socket) {
     // });
 
 });
+
 server.listen(8081);
 
